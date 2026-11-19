@@ -1,0 +1,80 @@
+<site-packages>\sklearn\utils\_param_validation.py:14: UserWarning: A NumPy version >=1.23.5 and <2.5.0 is required for this version of SciPy (detected version 2.5.1)
+  from scipy.sparse import csr_matrix, issparse
+24 games to play, about 2,592 agent calls. Your saved panel cost about $0.03 a game (about $0.72 here; DeepSeek is cheapest, Gemini dearest).
+   or_deepseek__dial_norule_aware__lam1__n3__s1
+   or_deepseek__dial_norule_aware__lam1__n3__s2
+   or_deepseek__dial_norule_aware__lam1__n3__s3
+   or_deepseek__explicit_aware__lam1__n3__s1
+   or_deepseek__explicit_aware__lam1__n3__s2
+   or_deepseek__explicit_aware__lam1__n3__s3
+   or_deepseek__explicit_collusion__lam1__n3__s2
+   or_deepseek__explicit_collusion__lam1__n3__s3
+   or_gptoss__dial_norule_aware__lam1__n3__s1
+   or_gptoss__dial_norule_aware__lam1__n3__s2
+   or_gptoss__dial_norule_aware__lam1__n3__s3
+   or_gptoss__explicit_aware__lam1__n3__s1
+   or_gptoss__explicit_aware__lam1__n3__s2
+   or_gptoss__explicit_aware__lam1__n3__s3
+   or_gptoss__explicit_collusion__lam1__n3__s2
+   or_gptoss__explicit_collusion__lam1__n3__s3
+   or_llama__dial_norule_aware__lam1__n3__s1
+   or_llama__dial_norule_aware__lam1__n3__s2
+   or_llama__dial_norule_aware__lam1__n3__s3
+   or_llama__explicit_aware__lam1__n3__s1
+   or_llama__explicit_aware__lam1__n3__s2
+   or_llama__explicit_aware__lam1__n3__s3
+   or_llama__explicit_collusion__lam1__n3__s2
+   or_llama__explicit_collusion__lam1__n3__s3
+done  or_deepseek__dial_norule_aware__lam1__n3__s3
+done  or_deepseek__dial_norule_aware__lam1__n3__s1
+done  or_deepseek__dial_norule_aware__lam1__n3__s2
+done  or_deepseek__explicit_aware__lam1__n3__s1
+done  or_gptoss__dial_norule_aware__lam1__n3__s1
+done  or_gptoss__dial_norule_aware__lam1__n3__s3
+done  or_llama__dial_norule_aware__lam1__n3__s1
+done  or_llama__dial_norule_aware__lam1__n3__s2
+done  or_gptoss__dial_norule_aware__lam1__n3__s2
+done  or_gptoss__explicit_aware__lam1__n3__s1
+done  or_deepseek__explicit_aware__lam1__n3__s3
+done  or_deepseek__explicit_aware__lam1__n3__s2
+done  or_deepseek__explicit_collusion__lam1__n3__s3
+done  or_deepseek__explicit_collusion__lam1__n3__s2
+done  or_gptoss__explicit_aware__lam1__n3__s3
+done  or_llama__explicit_aware__lam1__n3__s1
+done  or_gptoss__explicit_aware__lam1__n3__s2
+done  or_llama__dial_norule_aware__lam1__n3__s3
+done  or_gptoss__explicit_collusion__lam1__n3__s2
+done  or_gptoss__explicit_collusion__lam1__n3__s3
+done  or_llama__explicit_aware__lam1__n3__s2
+done  or_llama__explicit_aware__lam1__n3__s3
+done  or_llama__explicit_collusion__lam1__n3__s2
+done  or_llama__explicit_collusion__lam1__n3__s3
+{
+ "or_deepseek": {
+  "calls": 864,
+  "input_tokens": 1063605,
+  "output_tokens": 46163,
+  "parse_failures": 0,
+  "api_errors": 0,
+  "estimated_usd": 0.1052
+ },
+ "or_gptoss": {
+  "calls": 864,
+  "input_tokens": 997374,
+  "output_tokens": 100565,
+  "parse_failures": 0,
+  "api_errors": 0,
+  "estimated_usd": 0.2099
+ },
+ "or_llama": {
+  "calls": 897,
+  "input_tokens": 1004241,
+  "output_tokens": 39799,
+  "parse_failures": 0,
+  "api_errors": 37,
+  "estimated_usd": 0.2147
+ },
+ "_total_tokens": 3251747
+}
+finished. 0 game(s) incomplete.
+next: python b2_aware_games.py score

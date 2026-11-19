@@ -1,0 +1,12 @@
+label,case_type,category,n
+0,cheap_talk,do_only,1
+0,cheap_talk,neither,5
+0,honest,do_only,1
+0,honest,neither,5
+0,honest_nomsg,do_only,1
+0,honest_nomsg,neither,5
+0,innocent_parallel,do_only,6
+1,explicit_collusion,both,12
+1,tacit_collusion,both,4
+1,tacit_collusion,do_only,7
+1,tacit_collusion,neither,1

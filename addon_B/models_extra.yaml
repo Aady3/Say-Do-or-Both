@@ -1,0 +1,80 @@
+# Extra model entries for the Paper B add-on. Merged over the repository's config/models.yaml at run
+# time (an entry with the same key REPLACES the repository's entry; nothing in the repository is edited).
+#
+# auth: openrouter   any OpenAI-compatible endpoint with a bearer key: set base_url and api_key_env
+# auth: modal        the repository's Modal proxy scheme (see the repository's .env.example)
+# auth: adaption     the Adaption SDK (Responses API); needs `pip install adaption` and ADAPTION_API_KEY.
+#                    Experimental: written from the Paper A client, not yet run against the live service.
+#                    Run `python b_check_endpoint.py --key <key>` before relying on it.
+
+models:
+  # ---- stack 2: second judge and second claim extractor (OpenRouter, a few cents per run) ----
+  j2_haiku:
+    model: anthropic/claude-haiku-5.5
+    base_url: https://openrouter.ai/api/v1
+    auth: openrouter
+    api_key_env: OPENROUTER_API_KEY
+    temperature: 0.7          # same sampling as the frozen GLM judge
+    top_p: 0.9
+    max_tokens_multiplier: 4
+    timeout: 180
+    price_per_m_input: 0.10
+    price_per_m_output: 0.50
+  j2_gemini:                  # alternative second judge (a third family)
+    model: google/gemini-3.1-flash-lite
+    base_url: https://openrouter.ai/api/v1
+    auth: openrouter
+    api_key_env: OPENROUTER_API_KEY
+    temperature: 0.7
+    top_p: 0.9
+    extra_body: {reasoning: {effort: low}}
+    max_tokens_multiplier: 8
+    timeout: 180
+    price_per_m_input: 0.25
+    price_per_m_output: 1.50
+
+  # ---- SWITCH A: the paper's own judge and extractor served from OpenRouter instead of Modal ----
+  # Uncomment and fill in the model ids exactly as the OpenRouter catalogue lists them (check that the
+  # catalogue has them; if it does not, use stack 2). Because the keys are `glm` and `qwen`, the saved
+  # files keep their names and the frozen thresholds apply. Run b_check_endpoint.py --equivalence first.
+  # glm:
+  #   model: z-ai/glm-5.3              # <- verify the id in the OpenRouter catalogue
+  #   base_url: https://openrouter.ai/api/v1
+  #   auth: openrouter
+  #   api_key_env: OPENROUTER_API_KEY
+  #   temperature: 0.7
+  #   top_p: 0.9
+  #   max_tokens_multiplier: 8
+  #   timeout: 300
+  #   price_per_m_input: null
+  #   price_per_m_output: null
+  # qwen:
+  #   model: qwen/qwen3.8-2.4t-a95b    # <- verify the id in the OpenRouter catalogue
+  #   base_url: https://openrouter.ai/api/v1
+  #   auth: openrouter
+  #   api_key_env: OPENROUTER_API_KEY
+  #   temperature: 0.3
+  #   top_p: 0.95
+  #   max_tokens_multiplier: 4
+  #   timeout: 180
+  #   price_per_m_input: null
+  #   price_per_m_output: null
+
+  # ---- SWITCH B: a judge / extractor / agent family on Adaption credits (experimental) ----
+  # These are different models from the paper's judge, so they form their own stack: use them with
+  # b1_second_stack.py --judge ad_glm52 --extractor ad_glm52, never under the keys `glm` or `qwen`.
+  # ad_glm52:
+  #   model: glm-5.2
+  #   auth: adaption
+  #   temperature: 0.7
+  #   max_tokens_multiplier: 6
+  #   timeout: 240
+  # ad_deepseek:                       # an agent family for b2_aware_games.py play --models ad_deepseek
+  #   model: deepseek-v4-flash
+  #   auth: adaption
+  #   temperature: 0.3
+  #   max_tokens_multiplier: 4
+  #   timeout: 180
+
+budget:
+  max_total_tokens: 12000000

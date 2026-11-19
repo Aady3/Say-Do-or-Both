@@ -1,0 +1,29 @@
+# secrets and local environments
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.claude/
+
+# ad-hoc run logs and evaluate outputs (the curated runs live under results/)
+logs/
+outputs/
+poc_check_logs/
+pilot_logs/
+pilot2_logs/
+pilot3_logs/
+eval_logs/
+
+# not part of the repository: the report (added separately as a PDF), planning
+# documents and the pilot log
+Report/
+docs/
+
+# derived copies that the scripts rebuild (see results/README.md)
+results/*/runs/eval_pooled/
+results/*/runs/panel_all/
+results/*/analysis/interim_*/
+
+# add-on working copies (run folders are copied here before monitors touch them)
+addon_B/work/

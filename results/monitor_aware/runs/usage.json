@@ -1,0 +1,29 @@
+[
+ {
+  "or_deepseek": {
+   "calls": 864,
+   "input_tokens": 1063605,
+   "output_tokens": 46163,
+   "parse_failures": 0,
+   "api_errors": 0,
+   "estimated_usd": 0.1052
+  },
+  "or_gptoss": {
+   "calls": 864,
+   "input_tokens": 997374,
+   "output_tokens": 100565,
+   "parse_failures": 0,
+   "api_errors": 0,
+   "estimated_usd": 0.2099
+  },
+  "or_llama": {
+   "calls": 897,
+   "input_tokens": 1004241,
+   "output_tokens": 39799,
+   "parse_failures": 0,
+   "api_errors": 37,
+   "estimated_usd": 0.2147
+  },
+  "_total_tokens": 3251747
+ }
+]

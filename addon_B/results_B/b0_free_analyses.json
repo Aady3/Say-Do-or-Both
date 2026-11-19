@@ -1,0 +1,105 @@
+{
+ "baseline": {
+  "auroc": {
+   "clf": 0.9913194444444444,
+   "clf_bid": 0.9895833333333333,
+   "baseline": 0.9626736111111112
+  },
+  "clf_minus_baseline_2000": {
+   "point": 0.02864583333333326,
+   "ci_low": -0.020833333333333263,
+   "ci_high": 0.09724392361111098,
+   "p_one_sided": 0.189
+  },
+  "clf_bid_minus_baseline_2000": {
+   "point": 0.0269097222222221,
+   "ci_low": -0.021701388888888843,
+   "ci_high": 0.0963758680555554,
+   "p_one_sided": 0.2065
+  },
+  "clf_minus_baseline_20000": {
+   "point": 0.02864583333333326,
+   "ci_low": -0.02083333333333315,
+   "ci_high": 0.09722222222222221,
+   "p_one_sided": 0.18645
+  },
+  "clf_bid_minus_baseline_20000": {
+   "point": 0.0269097222222221,
+   "ci_low": -0.021701388888888843,
+   "ci_high": 0.09635416666666663,
+   "p_one_sided": 0.2038
+  }
+ },
+ "fusion": {
+  "auroc": {
+   "say": 0.890625,
+   "do": 0.8133680555555556,
+   "saydo_judge": 0.9149305555555556,
+   "mean(say,do)": 0.9748263888888888,
+   "max(say,do)": 0.9166666666666666,
+   "logistic(say,do), leave-one-seed-out": 0.9739583333333333
+  },
+  "saydo_judge": {
+   "delta_vs_best_single": 0.02430555555555558,
+   "ci_low": -0.07554253472222225,
+   "ci_high": 0.08072916666666663,
+   "p_one_sided": 0.3295
+  },
+  "mean(say,do)": {
+   "delta_vs_best_single": 0.08420138888888884,
+   "ci_low": 0.01822916666666663,
+   "ci_high": 0.13804253472222214,
+   "p_one_sided": 0.0035
+  },
+  "max(say,do)": {
+   "delta_vs_best_single": 0.02604166666666663,
+   "ci_low": -0.08335503472222226,
+   "ci_high": 0.08246527777777779,
+   "p_one_sided": 0.321
+  },
+  "logistic(say,do), leave-one-seed-out": {
+   "delta_vs_best_single": 0.08333333333333326,
+   "ci_low": 0.013867187499999954,
+   "ci_high": 0.13891059027777772,
+   "p_one_sided": 0.008
+  },
+  "logistic_minus_saydo_judge": {
+   "point": 0.05902777777777768,
+   "ci_low": 0.01128472222222221,
+   "ci_high": 0.11979166666666663,
+   "p_one_sided": 0.004
+  }
+ },
+ "consistency_under_stress": [
+  {
+   "alpha": 0,
+   "consistency_auroc": 0.7135416666666666,
+   "explicit_rings_flagged_at_frozen_threshold": 0.8333333333333334,
+   "executed_agreements_per_explicit_ring": 4.75
+  },
+  {
+   "alpha": 0.25,
+   "consistency_auroc": 0.7133680555555554,
+   "explicit_rings_flagged_at_frozen_threshold": 0.8250000000000002,
+   "executed_agreements_per_explicit_ring": 4.5875
+  },
+  {
+   "alpha": 0.5,
+   "consistency_auroc": 0.7125868055555555,
+   "explicit_rings_flagged_at_frozen_threshold": 0.7833333333333334,
+   "executed_agreements_per_explicit_ring": 4.5375000000000005
+  },
+  {
+   "alpha": 0.75,
+   "consistency_auroc": 0.7124131944444444,
+   "explicit_rings_flagged_at_frozen_threshold": 0.7708333333333334,
+   "executed_agreements_per_explicit_ring": 4.520833333333333
+  },
+  {
+   "alpha": 1.0,
+   "consistency_auroc": 0.69140625,
+   "explicit_rings_flagged_at_frozen_threshold": 0.10833333333333332,
+   "executed_agreements_per_explicit_ring": 2.875
+  }
+ ]
+}
